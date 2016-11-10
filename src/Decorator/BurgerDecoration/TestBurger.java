@@ -13,5 +13,6 @@ public class TestBurger {
     System.out.println("-------------------------");
     SauceDecorator sd = new SauceDecorator(cd);
     sd.operation();
+    System.out.println("total price "+sd.getPrice());
   }
 }

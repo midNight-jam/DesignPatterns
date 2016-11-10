@@ -5,10 +5,12 @@ package Decorator.BurgerDecoration;
  */
 public class CustomBurger extends Burger {
 
-  private int price;
-
   CustomBurger() {
     price = 5;
+  }
+
+  public int getPrice() {
+    return price;
   }
 
   public int operation() {

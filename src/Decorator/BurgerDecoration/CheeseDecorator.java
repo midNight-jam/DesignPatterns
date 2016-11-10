@@ -11,9 +11,13 @@ public class CheeseDecorator extends BurgerDecorator {
     price = 2;
   }
 
+  public int getPrice() {
+    return price + burger.getPrice();
+  }
+
   public int operation() {
     int bugPrice = burger.operation();
-    System.out.println("CheeseDecorator operation, Cheese decoraion price 2 - bug price " + (price + bugPrice));
+    System.out.println("CheeseDecorator operation, Cheese decoraion price 2 - bug price " + getPrice());
     return price + bugPrice;
   }
 }

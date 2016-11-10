@@ -14,4 +14,8 @@ public abstract class BurgerDecorator extends Burger {
     System.out.println("Burger decorators operation, burger decoration price -- 0");
     return 0;
   }
+
+  public int getPrice() {
+    return price;
+  }
 }
