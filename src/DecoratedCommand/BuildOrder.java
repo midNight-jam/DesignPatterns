@@ -9,6 +9,7 @@ public class BuildOrder {
     iPhoneApp.setDecaf("3/4");
     iPhoneApp.setDrink("LL");
     iPhoneApp.setMilk("WM");
+    iPhoneApp.setShots("OO");
     System.out.println(" output "+iPhoneApp.sendCommand());
   }
 }

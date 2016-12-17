@@ -9,7 +9,7 @@ public class IPhoneApp {
 
   IPhoneApp() {
     command = new Robot();
-    decorators = new IRobotCommand[3];
+    decorators = new IRobotCommand[4];
   }
 
   public void setDecaf(String decafOption) {
@@ -22,6 +22,16 @@ public class IPhoneApp {
     decorators[1].setOption(drinkOption);
   }
 
+  public void setMilk(String milkOption){
+    decorators[2] = new Milk();
+    decorators[2].setOption(milkOption);
+  }
+
+  public void setShots(String shotOption) {
+    decorators[3] = new Shots();
+    decorators[3].setOption(shotOption);
+  }
+
   public String sendCommand(){
     for(int i=0; i<decorators.length;i++){
       decorators[i].wrap(command);
@@ -29,13 +39,4 @@ public class IPhoneApp {
     }
     return this.command.getCommand();
   }
-
-  public void setMilk(String milkOption){
-    decorators[2] = new Milk();
-    decorators[2].setOption(milkOption);
-  }
-
-//  public void setShots(){}
-
-
 }
